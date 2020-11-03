@@ -1,5 +1,54 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+{{ super() }}
+<style>
+    body {
+        background-color: black;
+        overflow: hidden;
+    }
+    h1 {
+        font-weight: 800;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+
+    .jumbotron {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    #background{
+        opacity: 0.4;
+        z-index: -5;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url('../static/images/pexels-august-de-richelieu-4260639.jpg');
+        background-size: cover;
+        background-position: 0 center;
+    }
+</style>
+{% endblock styles %}
+
 {% block content %}
 
-<h1>Hello, World.</h1>
+<div id="background">
+s
+</div>
 
+<div class="jumbotron p-0 bg-transparent d-flex align-items-center">
+    <div class="text-white w-50">
+        <h1 class="mb-5">Making time for what matters.</h1>
+        <p class="mb-5">No need for long queues to cast your vote. Share your voice in the comfort of your home.</p>
+
+        <a href="{{ url_for('auth.login') }}"><button class="button btn-blue w-100">Vote Now</button></a>
+
+    </div>
+</div>
 {% endblock content %}
