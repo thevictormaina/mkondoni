@@ -1,3 +1,11 @@
+from . import db 
+from flask_login import UserMixin
+from . import login_manager
+
+@login_manager.user_loader
+def load_voter(voter_id):
+    return Voter.query.get(int(id))
+
 class Voter(UserMixin,db.Model):
     id = db.Column(db.Integer,primary_key = True)
     national_id = db.Column(db.Integer)
