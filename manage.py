@@ -1,6 +1,6 @@
 from app import create_app, db
 from flask_script import Manager, Server
-from app.models import Voter
+from app.models import Voter, President, Senator, Governor
 from flask_migrate import Migrate, MigrateCommand
 from commit_data import commit_data
 
