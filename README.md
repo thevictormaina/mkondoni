@@ -26,16 +26,16 @@ Technologies used to develop this application:
 
 ## Setup Instruction (Ubuntu)
 
-ctrl+alt+t (open terminal)
-git clone https://github.com/VictorKMaina/mkondoni.git
-cd mkondoni 
-sudo apt-get update
-sudo apt-get install python3.6
-sudo apt-get install python3-pip
-sudo apt-get install python3.6-venv
-python3.6 -m venv virtual
-source virtual/bin/activate
-pip install -r requirements.txt
+1. ctrl+alt+t (open terminal)
+2. git clone https://github.com/VictorKMaina/mkondoni.git
+3. cd mkondoni 
+4. sudo apt-get update
+5. sudo apt-get install python3.6
+6. sudo apt-get install python3-pip
+7. sudo apt-get install python3.6-venv
+8. python3.6 -m venv virtual
+9. source virtual/bin/activate
+10. pip install -r requirements.txt
 
 ## Feedback
 Feel free to send us feedback at (info.mkondoni@gmail.com). Also, if you wish to contribute, kindly contact us via the email provided.
