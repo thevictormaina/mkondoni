@@ -3,16 +3,16 @@ from flask_login import UserMixin
 from . import login_manager
 
 @login_manager.user_loader
-def load_voter(voter_id):
-    return voter.query.get(int(voter_id))
+def load_user(voter_id):
+    return Voter.query.get((voter_id))
 
 
 class Voter(UserMixin,db.Model):
     __tablename__ = 'voters'
 
     id = db.Column(db.Integer,primary_key = True)
-    national_id = db.Column(db.Integer)
-    passport = db.Column(db.Integer)
+    national_id = db.Column(db.String)
+    passport = db.Column(db.String)
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
     location = db.Column(db.String(255))

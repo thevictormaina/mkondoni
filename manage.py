@@ -2,7 +2,7 @@ from app import create_app, db
 from flask_script import Manager, Server
 from app.models import Voter
 from flask_migrate import Migrate, MigrateCommand
-
+from create_voters import add_voters
 # Create app instance
 app = create_app("development")
 
@@ -23,7 +23,7 @@ def test():
 
 @manager.shell
 def make_shell_context():
-    return dict(app = app, db = db, Voter = Voter)
+    return dict(app = app, db = db, Voter = Voter,add_voters=add_voters)
 
 if __name__ == "__main__":
     manager.run()

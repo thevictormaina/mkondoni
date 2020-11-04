@@ -5,17 +5,21 @@ from .. models import Voter
 from .forms import LoginForm
 from .. import db
 
+
 @auth.route("/login", methods=["GET", "POST"])
 def login(): 
     title = "Mkondoni"
-    login_form = LoginForm()
-    if login_form.validate_on_submit():
-        voter =Voter.query.filter_by(passport=login_form.passport.data).first()
-        if voter is not None:
+    form = LoginForm()
+    if form.validate_on_submit():
+        voter = Voter(national_id= form.passport.data,first_name= form.first_name.data,last_name = form.last_name.data,location=form.location.data)
+
+        check_voter = Voter.query.filter_by(national_id=form.passport.data).first()
+        
+        if check_voter is not None:
             login_user(voter)
             return redirect(request.args.get('next') or url_for('main.index'))
 
-    return render_template("auth/login.html", title = title,login_form=login_form)
+    return render_template("auth/login.html", title = title,login_form=form)
     
 @auth.route("/sign-out")
 # @login_required
