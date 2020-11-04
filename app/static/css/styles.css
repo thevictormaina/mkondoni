@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Montserrat:wght@400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Montserrat:wght@400;500;700;800&display=swap');
 body, html {
     font-family: Montserrat;
     font-weight: 500;
@@ -33,4 +33,51 @@ h2 {
     font-size: 1.3rem;
     width: 70%;
     margin: auto;
+}
+.candidate {
+    border-radius: 10px;
+    background-color: #fafafa;
+    min-width: 600px;
+}
+.candidate:hover {
+    cursor: pointer;
+    background-color: #fcfaff;
+}
+
+div.candidate-header {
+    border-radius: 10px 10px 0 0;
+    background-color: #ededed;
+    padding: 12px;
+}
+
+img.party-logo {
+    width: 40px;
+}
+
+span.party-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+div.candidate-image {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+}
+
+div.candidate-name {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+div.candidate-title {
+    font-size: 1.3rem;
+    margin-top: 2px;
+}
+.current-results {
+    background-color: #571CFF;
+    color: white;
+}
+.current-results h1 {
+    font-size: 2.8rem;
 }

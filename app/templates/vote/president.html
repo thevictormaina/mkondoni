@@ -1,10 +1,27 @@
 {% extends 'base.html' %}
+{% import "macros/candidate_macro.html" as macro %}
+
+{% block styles %}
+{{ super() }}
+
+<style>
+</style>
+
+{% endblock styles %}
 
 {% block content %}
 
 <h1 class="text-center mt-5 mb-3">Presidential</h1>
 <div class="text-center subheading mb-5">Please select your preferred presidential candidate.</div>
 
+<form class="w-100 px-5">
+    <div class="d-flex align-items-center">
+        <input type="radio" name="option1" class="mr-5">
+        <label for="option1" class="flex-fill">
+            {{ macro.presidential() }}
+        </label>
+    </div>
+</form>
 
-    
+
 {% endblock content %}
