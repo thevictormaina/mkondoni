@@ -1,4 +1,4 @@
-from .. import db 
+from . import db
 from flask_login import UserMixin
 from .. import login_manager
 
@@ -13,6 +13,7 @@ class Voter(UserMixin,db.Model):
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
     location = db.Column(db.String(255))
+    voted = db.Column(db.Boolean, default = False)
 
 class President(db.Model):
     id = db.Column(db.Integer,primary_key = True)
