@@ -39,7 +39,7 @@ def gubernatorials_votes(gubernatorial):
 
 add_governors(gubernatorial)
 
-SenatorialS = [
+Senatorials = [
      senatorial(first_name = "Alice", last_name="Kipkoech",location="Nyeri",votes=0),
      senatorial(first_name = "Jane", last_name="Oyando",location="Nairobi",votes=0),
      senatorial(first_name = "Michael", last_name="Mwaura",location="Kisumu",votes=0), 
