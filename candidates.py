@@ -39,3 +39,23 @@ def gubernatorials_votes(gubernatorial):
 
 add_governors(gubernatorial)
 
+SenatorialS = [
+     senatorial(first_name = "Alice", last_name="Kipkoech",location="Nyeri",votes=0),
+     senatorial(first_name = "Jane", last_name="Oyando",location="Nairobi",votes=0),
+     senatorial(first_name = "Michael", last_name="Mwaura",location="Kisumu",votes=0), 
+     senatorial(first_name = "Andrew", last_name="Juma",location="Mombasa",votes=0)
+     senatorial(first_name = "Sandra", last_name="Mwikali",location="Kwale",votes=0)
+     senatorial(first_name = "Lisa", last_name="Ali",location="Nairobi",votes=0,)
+     senatorial(first_name = "Kipkurui", last_name="Mercy",location="Mombasa",votes=0,)
+     senatorial(first_name = "Sandy", last_name="Maalim",location="Nyeri",votes=0,)
+     senatorial(first_name = "Abdi", last_name="Hussein",location="Kwale",votes=0,)
+     senatorial(first_name = "Erick", last_name="Boaz",location="Kisumu",votes=0,)
+]
+
+def senetarial_votes(senetorial):
+    for senetorial in senetorials:
+        db.session.add(senetorial)
+        db.session.commit()
+        print("\n", voter, "\n")
+
+add_senetors(senetarial)
