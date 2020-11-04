@@ -2,14 +2,15 @@ from flask import render_template, redirect, url_for, flash, request
 from flask_login import login_user, logout_user, login_required
 from . import auth
 # from ..models import 
-# from .forms import 
+from .forms import LoginForm
 from .. import db
 
 @auth.route("/login", methods=["GET", "POST"])
 def login(): 
     title = "Mkondoni"
-    return render_template("auth/login.html", title = title)
-
+    login_form = LoginForm()
+    return render_template("auth/login.html", title = title,login_form=login_form)
+    
 @auth.route("/sign-out")
 # @login_required
 def logout():
