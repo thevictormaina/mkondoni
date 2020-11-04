@@ -4,6 +4,10 @@ from .. import login_manager
 
 @login_manager.user_loader
 def load_voter(voter_id):
+<<<<<<< HEAD:app/models/models.py
+=======
+    
+>>>>>>> e15480b9516030d119cd9247dc47c1d81f8ad39e:app/models.py
     return Voter.query.get(int(voter_id))
 
 
