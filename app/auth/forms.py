@@ -15,5 +15,6 @@ class LoginForm(FlaskForm):
     def validate_passport(self,data_field):
         if Voter.query.filter_by(passport=data_field.data).first():
             raise ValidationError('There is an account with that ID number')
+        
 
             

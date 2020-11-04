@@ -11,13 +11,16 @@ def login():
     title = "Mkondoni"
     form = LoginForm()
     if form.validate_on_submit():
-        voter = Voter(national_id= form.passport.data,first_name= form.first_name.data,last_name = form.last_name.data,location=form.location.data)
+        voters = Voter(national_id= form.passport.data,first_name= form.first_name.data,last_name = form.last_name.data,location=form.location.data)
 
         check_voter = Voter.query.filter_by(national_id=form.passport.data).first()
         
         if check_voter is not None:
-            login_user(voter)
+            login_user(check_voter)
             return redirect(request.args.get('next') or url_for('main.index'))
+        else:        
+            flash('Your ID number or Passport is not registered')
+    
 
     return render_template("auth/login.html", title = title,login_form=form)
     

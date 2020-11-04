@@ -3,8 +3,9 @@ from flask_login import UserMixin
 from . import login_manager
 
 @login_manager.user_loader
-def load_user(voter_id):
-    return Voter.query.get((voter_id))
+def load_voter(voter_id):
+    pass
+    # return Voter.query.get(int(voter_id))
 
 
 class Voter(UserMixin,db.Model):
