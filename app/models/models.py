@@ -18,6 +18,13 @@ class Voter(UserMixin,db.Model):
     location = db.Column(db.String(255))
     voted = db.Column(db.Boolean, default = False)
 
+    def has_voted(self):
+        """
+        Method to set Voter.voted to true
+        """
+        self.voted = True
+        db.session.commit()
+
 class President(db.Model):
     __tablename__="presidents"
     id = db.Column(db.Integer,primary_key = True)
