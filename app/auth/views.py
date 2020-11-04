@@ -18,7 +18,7 @@ def login():
         if check_voter is not None:
             if check_voter.voted == False:
                 login_user(check_voter)
-                return redirect(request.args.get('next') or url_for('main.index'))
+                return redirect(request.args.get('next') or url_for('main.president'))
             else:        
                 flash('You have already voted.')
         else:

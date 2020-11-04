@@ -10,8 +10,6 @@ voters = [Voter(national_id="12345678", first_name="John", last_name="Joe"),
 
 
 presidents = [
-    President(first_name="John", last_name="Joe", location="Kenya", votes=0),
-    President(first_name="Jane", last_name="Joe", location="Kenya", votes=0),
     President(first_name="Uhuru", last_name="Kenyatta",
               location="Kenya", votes=0),
     President(first_name="Raila", last_name="Odinga",

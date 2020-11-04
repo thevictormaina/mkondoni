@@ -1,27 +1,19 @@
 {% extends 'base.html' %}
-{% import "macros/candidate_macro.html" as macro %}
-
-{% block styles %}
-{{ super() }}
-
-<style>
-</style>
-
-{% endblock styles %}
+{% import "macros/presidential_macro.html" as macro %}
 
 {% block content %}
 
-<h1 class="text-center mt-5 mb-3">Presidential</h1>
+<h1 class="text-center mt-5 mb-3">President</h1>
 <div class="text-center subheading mb-5">Please select your preferred presidential candidate.</div>
 
-<form class="w-100 px-5">
-    <div class="d-flex align-items-center">
-        <input type="radio" name="option1" class="mr-5">
-        <label for="option1" class="flex-fill">
-            {{ macro.presidential() }}
-        </label>
+<form class="w-100 px-5 mb-5" method="POST" action="{{ url_for('main.senator') }}">
+    {{ macro.presidential() }}
+    {{ macro.presidential() }}
+
+    <div class="pl-5" style="margin-left: 13px;">
+        <button type="submit" class="button btn-blue" style="min-width: 600px;">Submit</button>
     </div>
-</form>
+</form> 
 
 
 {% endblock content %}
