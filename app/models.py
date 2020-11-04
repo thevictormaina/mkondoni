@@ -12,3 +12,8 @@ class President(db.Model):
     last_name = db.Column(db.String(255))
     location = db.Column(db.String(255))
     votes = db.Column(db.Integer)
+
+    def add_vote(self):
+        self.votes+=1
+        db.session.add(self)
+        db.session.commit()
