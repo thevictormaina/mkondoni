@@ -16,9 +16,18 @@
 {% block content %}
 
 <div class="container">
-  <h2 class="text-center mt-5 mb-3">Enter you details.</h2>
+  <h2 class="text-center mt-5 mb-3">Enter your details.</h2>
+
+    <!--Flash message -->
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ message }}
+    </div>
+    {% endfor %}
   <!-- Login form -->
   <div class="pt-4">
+   
     {{form.render_form(login_form)}}
   </div>
 </div>
