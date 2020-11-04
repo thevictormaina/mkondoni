@@ -1,18 +1,17 @@
 # Mkondoni voting App
 
-## A Voting application
+
+## Introduction
+![Screenshot from 2020-11-04 21-20-17](https://user-images.githubusercontent.com/51042819/98153774-c0259f80-1ee4-11eb-9f82-fda03a58c15e.png)
+
+Voting generally can be a very involving and expensive process. As a solution, we developed Mkondoni voting app where by people can vote remotely without having to go out for long ques. The app takes in a user's ID or passport number and verifies it against a list of existing users. Once authenticated, a user can vote only once.
+
 
 ## Live link
 visit the application on https://mkondoni.herokuapp.com/ 
 
 ## Figma Design
 For the figma design visit https://www.figma.com/file/jTr9gTSk2SRivz43y8JyoQ/Untitled?node-id=1%3A3)
-
-
-## Introduction
-![Screenshot from 2020-11-04 21-20-17](https://user-images.githubusercontent.com/51042819/98153774-c0259f80-1ee4-11eb-9f82-fda03a58c15e.png)
-
-Voting generally can be a very involving and expensive process. As a solution, we developed Mkondoni voting app where by people can vote remotely without having to go out for long ques. The app takes in a user's ID or passport number and verifies it against a list of existing users. Once authenticated, a user can vote only once.
 
 ## Technologies Used
 
