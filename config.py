@@ -18,7 +18,7 @@ class TestConfig(Config):
     """
     Class for Test configurations. Child of Config class.
     """
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://victormainak:password@localhost/mkondoni_test"
 
 class DevConfig(Config):
     """
