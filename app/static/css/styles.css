@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Montserrat:wght@400;500;800&display=swap');
+body, html {
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+button.button {
+    padding: 15px 30px;
+    border: none;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+.btn-blue {
+    color: white;
+    background-color: #571CFF;
+}

@@ -7,7 +7,8 @@ from .. import db
 
 @auth.route("/login", methods=["GET", "POST"])
 def login(): 
-    pass
+    title = "Mkondoni"
+    return render_template("auth/login.html", title = title)
 
 @auth.route("/sign-out")
 # @login_required
