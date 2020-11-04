@@ -9,7 +9,7 @@ class LoginForm(FlaskForm):
     passport = StringField('ID or Passport Number',validators=[Required()])
     first_name = StringField('First Name',validators =[Required()])
     last_name = StringField('Last Name',validators =[Required()])
-    location = SelectField('County',choices=[("nairobi","Nairobi"),("mombasa","Mombasa"),("garissa","Garissa"),("kilifi","Kilifi"),("laikipia","Laikipia")],validators =[Required()])
+    location = SelectField('County',choices=[("","Pick an Option"),("nairobi","Nairobi"),("mombasa","Mombasa"),("garissa","Garissa"),("kilifi","Kilifi"),("laikipia","Laikipia")],validators =[Required()])
     submit = SubmitField('Submit')     
 
     def validate_passport(self,data_field):
