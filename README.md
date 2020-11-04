@@ -2,7 +2,11 @@
 
 ## A Voting application
 
-### [Heroku Link](https://mkondoni.herokuapp.com/) | [https://lucid.app/invitations/accept/c643424f-ac05-4323-b99e-34c1c4034c53) | [Figma Link](https://www.figma.com/file/jTr9gTSk2SRivz43y8JyoQ/Untitled?node-id=1%3A3)
+## Live link
+visit the application on https://mkondoni.herokuapp.com/ 
+
+## Figma Design
+For the figma design visit https://www.figma.com/file/jTr9gTSk2SRivz43y8JyoQ/Untitled?node-id=1%3A3)
 
 
 ## Introduction
