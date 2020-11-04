@@ -29,3 +29,8 @@ h2 {
     border: 1px solid #7C7C7C;
     margin-bottom: 2rem;
 }
+.subheading {
+    font-size: 1.3rem;
+    width: 70%;
+    margin: auto;
+}
