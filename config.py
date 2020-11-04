@@ -6,7 +6,6 @@ class Config:
     General configuration class
     """
     SECRET_KEY = os.environ.get("SECRET_KEY")
-    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://victormainak:password@localhost/mkondoni"
 
 class ProdConfig(Config):
     """
@@ -25,10 +24,7 @@ class DevConfig(Config):
     """
     Class for Development configurations. Child of Config class.
     """
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://victormainak:password@localhost/mkondoni'
     DEBUG = True
-
-config_options = {
-    "development": DevConfig,
-    "production": ProdConfig,
-    "test": TestConfig
-}
+    
+config_options = {"development": DevConfig, "production": ProdConfig,"test": TestConfig}

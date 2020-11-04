@@ -1,7 +1,8 @@
 from app import create_app, db
 from flask_script import Manager, Server
-# from app.models import 
+from app.models import Voter
 from flask_migrate import Migrate, MigrateCommand
+from commit_data import commit_data
 
 # Create app instance
 app = create_app("development")
@@ -23,7 +24,7 @@ def test():
 
 @manager.shell
 def make_shell_context():
-    return dict(app = app, db = db)
+    return dict(app = app, db = db, Voter = Voter, commit_data = commit_data)
 
 if __name__ == "__main__":
     manager.run()

@@ -4,7 +4,8 @@ body, html {
     font-weight: 500;
 }
 
-button.button {
+button.button, #submit {
+    width: 100%;
     padding: 15px 30px;
     border: none;
     font-weight: 800;
@@ -14,4 +15,22 @@ button.button {
 .btn-blue {
     color: white;
     background-color: #571CFF;
+}
+h1 {
+    font-weight: 800;
+    font-size: 2.3rem;
+}
+h2 {
+    font-weight: 800;
+    font-size: 2rem;
+}
+.form-control {
+    border-radius: 0;
+    border: 1px solid #7C7C7C;
+    margin-bottom: 2rem;
+}
+.subheading {
+    font-size: 1.3rem;
+    width: 70%;
+    margin: auto;
 }
