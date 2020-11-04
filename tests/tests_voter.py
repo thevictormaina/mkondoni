@@ -1,5 +1,5 @@
 import unittest
-from app.models import Voter,President,Senator,Governor
+from app.models import Voter
 
 class TestVoter(unittest.TestCase):
     """

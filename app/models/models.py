@@ -1,6 +1,6 @@
-from . import db 
+from .. import db 
 from flask_login import UserMixin
-from . import login_manager
+from .. import login_manager
 
 @login_manager.user_loader
 def load_voter(voter_id):
