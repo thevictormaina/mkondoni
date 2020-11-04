@@ -12,7 +12,8 @@ def index():
     title = "Mkondoni"
     return render_template("index.html", title = title)
 
-@main.route("/vote/president")
+@main.route("/vote/president", methods=["GET", "POST"])
+@login_required
 def president():
     """
     View function for loading president template
@@ -20,3 +21,30 @@ def president():
     title = "Mkondoni - Presidential Vote"
 
     return render_template("vote/president.html", title = title)
+
+@main.route("/vote/senator", methods=["GET", "POST"])
+@login_required
+def senator():
+    """
+    View function for loading senator page
+    """
+    title = "Mkondoni - Senatorial Vote"
+    return render_template("vote/senator.html")
+
+@main.route("/vote/governor", methods=["GET", "POST"])
+@login_required
+def governor():
+    """
+    View function for loading senator page
+    """
+    title = "Mkondoni - Gubernatorial Vote"
+    return render_template("vote/governor.html")
+
+@main.route("/finish", methods=["GET", "POST"])
+@login_required
+def finish():
+    """
+    View function for loading senator page
+    """
+    title = "Mkondoni - Thank You For Voting"
+    return render_template("finish.html")

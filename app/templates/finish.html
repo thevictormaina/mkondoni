@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% block styles %}
+
+{{super()}}
+
+<style>
+    .finished {
+        margin-top: 200px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+</style>
+
+{% endblock styles %}
+
+<div class="finished d-flex justify-content-center align-items-center">
+
+    <div class="text-center">
+        <h1>Thank you for voting.</h1>
+        <p>You can track the results real-time <a href="#">here</a>.</p>
+
+        <a href="auth/sign-out">
+            <button class="mt-5 button btn-blue">Finish</button>
+        </a>
+    </div>
+
+</div>
+
+{% endblock content %}
