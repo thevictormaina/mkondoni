@@ -11,14 +11,15 @@ class Voter(UserMixin,db.Model):
     __tablename__ = 'voters'
 
     id = db.Column(db.Integer,primary_key = True)
-    national_id = db.Column(db.String)
-    passport = db.Column(db.String)
+    national_id = db.Column(db.String, unique = True)
+    passport = db.Column(db.String, unique = True)
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
     location = db.Column(db.String(255))
     voted = db.Column(db.Boolean, default = False)
 
 class President(db.Model):
+    __tablename__="presidents"
     id = db.Column(db.Integer,primary_key = True)
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
@@ -31,6 +32,7 @@ class President(db.Model):
         db.session.commit()
 
 class Senator(db.Model):
+    __tablename__="senators"
     id = db.Column(db.Integer,primary_key = True)
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
@@ -44,6 +46,7 @@ class Senator(db.Model):
 
 
 class Governor(db.Model):
+    __tablename__="governors"
     id = db.Column(db.Integer,primary_key = True)
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))

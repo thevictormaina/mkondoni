@@ -1,12 +1,12 @@
 from app.models import Voter, President, Senator, Governor
 from app import db
 
-voters = [Voter(national_id="10345343", passport="", first_name="John", last_name="Joe"),
-          Voter(national_id="34534454", passport="",
+voters = [Voter(national_id="12345678", first_name="John", last_name="Joe"),
+          Voter(national_id="23456789",
                 first_name="Jane", last_name="Joe"),
-          Voter(national_id="45656764", passport="",
+          Voter(national_id="45656764",
                 first_name="Michael", last_name="Joe"),
-          Voter(national_id="23434565", passport="", first_name="Andrew", last_name="Does")]
+          Voter(national_id="34567891", first_name="Andrew", last_name="Does")]
 
 
 presidents = [
