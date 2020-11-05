@@ -35,8 +35,8 @@ senators = [
 ]
 
 parties =[
-        Party(party_name="ODM",party_logo_path=" "),
-        Party(party_name="Jubilee",party_logo_path=" ")
+        Party(party_name="ODM",party_logo_path="../../static/images/jubilee.png"),
+        Party(party_name="Jubilee",party_logo_path="../../static/images/odm.png")
 ]
 
 
