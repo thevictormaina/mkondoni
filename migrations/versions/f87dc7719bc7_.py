@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: a6185f8fb413
-Revises: d9aeb898562f
-Create Date: 2020-11-05 16:26:23.180855
+Revision ID: f87dc7719bc7
+Revises: 
+Create Date: 2020-11-05 20:59:17.821456
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'a6185f8fb413'
-down_revision = 'd9aeb898562f'
+revision = 'f87dc7719bc7'
+down_revision = None
 branch_labels = None
 depends_on = None
 
@@ -40,7 +40,7 @@ def upgrade():
     sa.Column('first_name', sa.String(length=255), nullable=True),
     sa.Column('last_name', sa.String(length=255), nullable=True),
     sa.Column('location', sa.String(length=255), nullable=True),
-    sa.Column('profile_pic_path', sa.String(), nullable=True),
+    sa.Column('profile_pic_path', sa.String(length=255), nullable=True),
     sa.Column('votes', sa.Integer(), nullable=True),
     sa.Column('party_name', sa.String(), nullable=True),
     sa.ForeignKeyConstraint(['party_name'], ['parties.party_name'], ),
@@ -51,8 +51,8 @@ def upgrade():
     sa.Column('first_name', sa.String(length=255), nullable=True),
     sa.Column('last_name', sa.String(length=255), nullable=True),
     sa.Column('location', sa.String(length=255), nullable=True),
-    sa.Column('profile_pic_path', sa.String(), nullable=True),
     sa.Column('votes', sa.Integer(), nullable=True),
+    sa.Column('profile_pic_path', sa.String(length=255), nullable=True),
     sa.Column('party_name', sa.String(), nullable=True),
     sa.ForeignKeyConstraint(['party_name'], ['parties.party_name'], ),
     sa.PrimaryKeyConstraint('id')
@@ -62,7 +62,7 @@ def upgrade():
     sa.Column('first_name', sa.String(length=255), nullable=True),
     sa.Column('last_name', sa.String(length=255), nullable=True),
     sa.Column('location', sa.String(length=255), nullable=True),
-    sa.Column('profile_pic_path', sa.String(), nullable=True),
+    sa.Column('profile_pic_path', sa.String(length=255), nullable=True),
     sa.Column('votes', sa.Integer(), nullable=True),
     sa.Column('party_name', sa.String(), nullable=True),
     sa.ForeignKeyConstraint(['party_name'], ['parties.party_name'], ),
@@ -73,7 +73,7 @@ def upgrade():
     sa.Column('first_name', sa.String(length=255), nullable=True),
     sa.Column('last_name', sa.String(length=255), nullable=True),
     sa.Column('location', sa.String(length=255), nullable=True),
-    sa.Column('profile_pic_path', sa.String(), nullable=True),
+    sa.Column('profile_pic_path', sa.String(length=255), nullable=True),
     sa.Column('president_id', sa.Integer(), nullable=True),
     sa.Column('party_name', sa.String(), nullable=True),
     sa.ForeignKeyConstraint(['party_name'], ['parties.party_name'], ),
