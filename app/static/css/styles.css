@@ -63,6 +63,7 @@ div.candidate-image {
     width: 120px;
     height: 120px;
     background-size: cover;
+    background-position: center;
 }
 
 div.candidate-name {

@@ -5,7 +5,7 @@ from flask_migrate import Migrate, MigrateCommand
 from commit_data import commit_data
 
 # Create app instance
-app = create_app("production")
+app = create_app("development")
 
 manager = Manager(app)
 manager.add_command("server", Server)
