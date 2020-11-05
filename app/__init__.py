@@ -32,5 +32,8 @@ def create_app(config_name):
 
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint, url_prefix="/auth")
+
+    from .vote import vote as vote_blueprint
+    app.register_blueprint(vote_blueprint, url_prefix="/vote")
     
     return app
