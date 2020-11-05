@@ -1,8 +1,7 @@
 from flask import render_template, request, redirect, url_for, abort
 import datetime
 from . import main
-# from .forms import 
-# from ..models import 
+from ..models import Voter, President, Senator, Governor, Party, Deputy
 from flask_login import login_required
 from .. import db
 from flask_login import login_required, current_user
@@ -12,33 +11,39 @@ def index():
     title = "Mkondoni"
     return render_template("index.html", title = title)
 
-@main.route("/vote/president", methods=["GET", "POST"])
+@main.route("/president", methods=["GET", "POST"])
 @login_required
 def president():
     """
     View function for loading president template
     """
+    presidents = President.query.all()
+
     title = "Mkondoni - Presidential Vote"
 
-    return render_template("vote/president.html", title = title)
+    return render_template("vote/president.html", title = title, presidents = presidents)
 
-@main.route("/vote/senator", methods=["GET", "POST"])
+@main.route("/senator", methods=["GET", "POST"])
 @login_required
 def senator():
     """
     View function for loading senator page
     """
-    title = "Mkondoni - Senatorial Vote"
-    return render_template("vote/senator.html")
+    senators = Senator.query.all()
 
-@main.route("/vote/governor", methods=["GET", "POST"])
+    title = "Mkondoni - Senatorial Vote"
+    return render_template("vote/senator.html", senators = senators)
+
+@main.route("/governor", methods=["GET", "POST"])
 @login_required
 def governor():
     """
     View function for loading senator page
     """
+    governors = Governor.query.all()
+
     title = "Mkondoni - Gubernatorial Vote"
-    return render_template("vote/governor.html")
+    return render_template("vote/governor.html", governors = governors)
 
 @main.route("/finish", methods=["GET", "POST"])
 @login_required

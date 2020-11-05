@@ -1,4 +1,4 @@
-from app.models import Voter, President, Senator, Governor
+from app.models import Voter, Party, President, Governor, Senator, Deputy
 from app import db
 
 voters = [Voter(national_id="12345678", first_name="John", last_name="Joe"),
@@ -9,38 +9,28 @@ voters = [Voter(national_id="12345678", first_name="John", last_name="Joe"),
           Voter(national_id="34567891", first_name="Andrew", last_name="Does")]
 
 
-presidents = [
-    President(first_name="Uhuru", last_name="Kenyatta",
-              location="Kenya", votes=0,party="Jubilee"),
-    President(first_name="Raila", last_name="Odinga",
-              location="Kenya", votes=0, party="ODM"),
+presidents = [President(first_name="Uhuru", last_name="Kenyatta", location="Kenya", votes=0, party_name="Jubilee"), President(first_name="Raila", last_name="Odinga", location="Kenya", votes=0, party_name="ODM")
     
 ]
 
-
-deputies = [
-    Deputy(first_name="William", last_name="Ruto",
-              location="Kenya",president_id=President.query.filter_by(first_name="Uhuru").first().id),
-    Deputy(first_name="Kalonzo", last_name="Musyoka",
-              location="Kenya",president_id=President.query.filter_by(first_name="Raila").first().id)
-]
+deputies = [Deputy(first_name="William", last_name="Ruto", location="Kenya",president_id=1), Deputy(first_name="Kalonzo", last_name="Musyoka", location="Kenya",president_id=2)]
 
 governors = [
     Governor(first_name="Lee", last_name="Kinyanjui",
-             location="Nakuru", votes=0, party="Jubilee"),
+             location="Nakuru", votes=0, party_name="Jubilee"),
     Governor(first_name="Mike", last_name="Mbuvi",
-             location="Nairobi", votes=0, party="jubilee"),
-    Governor(first_name="Josphat", last_name="Nanok", location="Turkana", votes=0, party="ODM")
+             location="Nairobi", votes=0, party_name="Jubilee"),
+    Governor(first_name="Josphat", last_name="Nanok", location="Turkana", votes=0, party_name="ODM")
    
 ]
 
 senators = [
     Senator(first_name="Margaret", last_name="Kamar",
-            location="Uasin-Gishu", votes=0,party="ODM"),
+            location="Uasin-Gishu", votes=0,party_name="ODM"),
     Senator(first_name="Kipchumba", last_name="Murkomen",
-            location="Elgeyo-Marakwet", votes=0,party="Jubilee"),
+            location="Elgeyo-Marakwet", votes=0,party_name="Jubilee"),
     Senator(first_name="Samuel", last_name="Poghisio",
-            location="West-Pokot", votes=0,party="ODM")
+            location="West-Pokot", votes=0,party_name="ODM")
 
 ]
 
@@ -51,7 +41,7 @@ parties =[
 
 
 def commit_data():
-    data = [voters, governors, presidents,deputies, senators, parties]
+    data = [parties,voters, governors, presidents,deputies, senators]
     for list in data:
         for person in list:
             db.session.add(person)
