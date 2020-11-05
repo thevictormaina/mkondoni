@@ -9,11 +9,11 @@ voters = [Voter(national_id="12345678", first_name="John", last_name="Joe"),
           Voter(national_id="34567891", first_name="Andrew", last_name="Does")]
 
 
-presidents = [President(first_name="Uhuru", last_name="Kenyatta", location="Kenya", votes=0, party_name="Jubilee"), President(first_name="Raila", last_name="Odinga", location="Kenya", votes=0, party_name="ODM")
+presidents = [President(first_name="Uhuru", last_name="Kenyatta", location="Kenya", votes=0, party_name="Jubilee", profile_pic_path="app/static/images"), President(first_name="Raila", last_name="Odinga", location="Kenya", votes=0, party_name="ODM")
     
 ]
 
-deputies = [Deputy(first_name="William", last_name="Ruto", location="Kenya",president_id=1), Deputy(first_name="Kalonzo", last_name="Musyoka", location="Kenya",president_id=2)]
+deputies = [Deputy(first_name="William", last_name="Ruto", location="Kenya",president_id=1, profile_pic_path = "/app/static/images/deputies/ruto.jpg"), Deputy(first_name="Kalonzo", last_name="Musyoka", location="Kenya",president_id=2, profile_pic_path = "/app/static/images/deputies/kalonzo.jpg")]
 
 governors = [
     Governor(first_name="Lee", last_name="Kinyanjui",
