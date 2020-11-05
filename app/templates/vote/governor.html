@@ -7,7 +7,7 @@
 <div class="text-center subheading mb-5">Please select your preferred gubernatorial candidate.</div>
 
 <form class="w-100 px-5 mb-5" method="POST" action="{{ url_for('vote.vote_governor') }}">
-    {% for governors in governors %}
+    {% for governor in governors %}
     {{ macro.governor(governor) }}
     {% endfor %}
 

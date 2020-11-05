@@ -40,7 +40,7 @@ def governor():
     """
     View function for loading senator page
     """
-    governor = governor.query.all()
+    governors = Governor.query.all()
 
     title = "Mkondoni - Gubernatorial Vote"
     return render_template("vote/governor.html", governors = governors)

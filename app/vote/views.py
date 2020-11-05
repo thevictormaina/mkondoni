@@ -18,11 +18,13 @@ def vote_president():
 
     return redirect(url_for("main.senator"))
 
-@vote.route("/senator")
+@vote.route("/senator", methods=["GET", "POST"])
 def vote_senator():
     """
     """
     senator_id = request.form["senator"]
+
+    print("\nSenator ID: ", senator_id, "\n")
 
     senator = Senator.query.filter_by(id = senator_id).first()
 
@@ -31,8 +33,9 @@ def vote_senator():
 
     return redirect(url_for("main.governor"))
 
-@vote.route("/governor")
+@vote.route("/governor", methods=["GET", "POST"])
 def vote_governor():
+    
     governor_id = request.form["governor"]
 
     governor = Governor.query.filter_by(id = governor_id).first()
@@ -40,4 +43,4 @@ def vote_governor():
     governor.add_vote()
     print("\nGovernor Votes: ", governor.first_name, " ", governor.votes)
 
-    return redirect(url_for("main.finis"))
+    return redirect(url_for("main.finish"))
