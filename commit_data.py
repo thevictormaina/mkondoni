@@ -1,4 +1,4 @@
-from app.models import Voter, Party, President, Governor, Senator, Deputy
+from app.models import *
 from app import db
 
 voters = [Voter(national_id="12345678", first_name="John", last_name="Joe"),
@@ -13,13 +13,10 @@ presidents = [President(first_name="Uhuru", last_name="Kenyatta", location="Keny
     
 ]
 
-deputies = [Deputy(first_name="William", last_name="Ruto", location="Kenya",president_id=1, profile_pic_path = "/app/static/images/deputies/ruto.jpg"), Deputy(first_name="Kalonzo", last_name="Musyoka", location="Kenya",president_id=2, profile_pic_path = "/app/static/images/deputies/kalonzo.jpg")]
+deputies = [Deputy(first_name="William", last_name="Ruto", location="Kenya",president_id=1, profile_pic_path = "../../static/images/deputies/ruto.jpg"), Deputy(first_name="Kalonzo", last_name="Musyoka", location="Kenya",president_id=2, profile_pic_path = "../../static/images/deputies/kalonzo.jpg")]
 
 governors = [
-    Governor(first_name="Lee", last_name="Kinyanjui",
-             location="Nakuru", votes=0, party_name="Jubilee"),
-    Governor(first_name="Mike", last_name="Mbuvi",
-             location="Nairobi", votes=0, party_name="Jubilee"),
+    Governor(first_name="Lee", last_name="Kinyanjui", location="Nakuru", votes=0, party_name="Jubilee", profile_pic_path = "../../static/images/senators/lee.jpg"), Governor(first_name="Mike", last_name="Mbuvi",location="Nairobi", votes=0, party_name="Jubilee"),
     Governor(first_name="Josphat", last_name="Nanok", location="Turkana", votes=0, party_name="ODM")
    
 ]
