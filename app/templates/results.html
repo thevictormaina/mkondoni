@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% import "macros/presidential_macro.html" as presidential_macro %}
+{% import "macros/senatorial_macro.html" as senatorial_macro %}
+{% import "macros/governor_macro.html" as governor_macro %}
+
+{% block styles %}
+{{  super() }}
+
+<style>
+    input[type="radio"] {
+        display: none;
+    }
+    div.candidate {
+        cursor: none;
+        min-width: 0;
+    }
+    div.candidate-title, div.candidate-name {
+        margin-left: 20px;
+    }
+</style>
+
+{% endblock styles %}
+
+{% block content %}
+
+<div class="container presidential">
+    <h1 class="m-3 mt-5 text-center">Presidential Results</h1>
+    <div class="row">
+        {% for president in presidents %}
+        <div class="col-md-6">
+            {{ presidential_macro.presidential(president) }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container governor">
+    <h1 class="m-3 mt-5 text-center">Gubernatorial Results</h1>
+    <div class="row">
+        {% for governor in governors %}
+        <div class="col-md-6">
+            {{ governor_macro.governor(governor) }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container senator">
+    <h1 class="m-3 mt-5 text-center">Senatorial Results</h1>
+    <div class="row">
+        {% for senator in senators %}
+        <div class="col-md-6">
+            {{ senatorial_macro.senatorial(senator) }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock content %}

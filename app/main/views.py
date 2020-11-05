@@ -53,3 +53,15 @@ def finish():
     """
     title = "Mkondoni - Thank You For Voting"
     return render_template("finish.html")
+
+@main.route("/results", methods=["GET", "POST"])
+def results():
+    """
+    """
+    presidents = President.query.all()
+    governors = Governor.query.all()
+    senators = Senator.query.all()
+
+    title = "Mkondoni - Results"
+
+    return render_template("results.html", senators = senators, governors = governors, presidents = presidents)
