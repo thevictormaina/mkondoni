@@ -41,8 +41,8 @@ class President(db.Model):
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
     location = db.Column(db.String(255))
-    profile_pic_path = db.Column(db.String)
     votes = db.Column(db.Integer)
+    profile_pic_path= db.Column(db.String(255))
     deputy = db.relationship("Deputy", uselist = False, back_populates = "president")
 
     party_name = db.Column(db.String, db.ForeignKey("parties.party_name"))
@@ -59,7 +59,6 @@ class Deputy(db.Model):
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
     location = db.Column(db.String(255))
-    profile_pic_path = db.Column(db.String)
     president_id = db.Column(db.Integer, db.ForeignKey("presidents.id"))
     president = db.relationship("President", back_populates = "deputy")
 
@@ -72,7 +71,6 @@ class Senator(db.Model):
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
     location = db.Column(db.String(255))
-    profile_pic_path = db.Column(db.String)
     votes = db.Column(db.Integer)
 
     party_name = db.Column(db.String, db.ForeignKey("parties.party_name"))
@@ -90,7 +88,6 @@ class Governor(db.Model):
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
     location = db.Column(db.String(255))
-    profile_pic_path = db.Column(db.String)
     votes = db.Column(db.Integer)
 
     party_name = db.Column(db.String, db.ForeignKey("parties.party_name"))

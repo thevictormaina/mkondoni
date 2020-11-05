@@ -9,7 +9,7 @@ voters = [Voter(national_id="12345678", first_name="John", last_name="Joe"),
           Voter(national_id="34567891", first_name="Andrew", last_name="Does")]
 
 
-presidents = [President(first_name="Uhuru", last_name="Kenyatta", location="Kenya", votes=0, party_name="Jubilee", profile_pic_path=""), President(first_name="Raila", last_name="Odinga", location="Kenya", votes=0, party_name="ODM")
+presidents = [President(first_name="Uhuru", last_name="Kenyatta", location="Kenya", votes=0, party_name="Jubilee", profile_pic_path="../../static/images/presidents/Uhuru_Kenyatta_1.jpg"), President(first_name="Raila", last_name="Odinga", location="Kenya", votes=0, party_name="ODM",profile_pic_path="../../static/images/presidents/raila.jpg")
     
 ]
 
@@ -17,10 +17,10 @@ deputies = [Deputy(first_name="William", last_name="Ruto", location="Kenya",pres
 
 governors = [
     Governor(first_name="Lee", last_name="Kinyanjui",
-             location="Nakuru", votes=0, party_name="Jubilee"),
+             location="Nakuru", votes=0, party_name="Jubilee",profile_pic_path = "../../static/images/governors/lee.jpeg"),
     Governor(first_name="Mike", last_name="Mbuvi",
-             location="Nairobi", votes=0, party_name="Jubilee"),
-    Governor(first_name="Josphat", last_name="Nanok", location="Turkana", votes=0, party_name="ODM")
+             location="Nairobi", votes=0, party_name="Jubilee",profile_pic_path = "../../static/images/governors/ruto.jpg"),
+    Governor(first_name="Josphat", last_name="Nanok", location="Turkana", votes=0, party_name="ODM",profile_pic_path = "../../static/images/governors/josphat.jpg")
    
 ]
 
