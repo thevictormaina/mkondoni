@@ -28,8 +28,10 @@ def senator():
     """
     View function for loading senator page
     """
+    senators = Senator.query.all()
+
     title = "Mkondoni - Senatorial Vote"
-    return render_template("vote/senator.html")
+    return render_template("vote/senator.html", senators = senators)
 
 @main.route("/vote/governor", methods=["GET", "POST"])
 @login_required
@@ -37,8 +39,10 @@ def governor():
     """
     View function for loading senator page
     """
+    governor = governor.query.all()
+
     title = "Mkondoni - Gubernatorial Vote"
-    return render_template("vote/governor.html")
+    return render_template("vote/governor.html", governors = governors)
 
 @main.route("/finish", methods=["GET", "POST"])
 @login_required

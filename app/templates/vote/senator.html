@@ -6,9 +6,10 @@
 <h1 class="text-center mt-5 mb-3">Senator</h1>
 <div class="text-center subheading mb-5">Please select your preferred senatorial candidate.</div>
 
-<form class="w-100 px-5 mb-5" method="POST" action="{{ url_for('main.governor') }}">
-    {{ macro.senatorial() }}
-    {{ macro.senatorial() }}
+<form class="w-100 px-5 mb-5" method="POST" action="{{ url_for('vote.vote_senator') }}">
+    {% for senator in senators %}
+    {{ macro.senatorial(senator) }}
+    {% endfor %}
 
     <div class="pl-5" style="margin-left: 13px;">
         <button type="submit" class="button btn-blue" style="min-width: 600px;">Submit</button>

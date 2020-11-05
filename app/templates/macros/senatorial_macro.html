@@ -1,14 +1,14 @@
-{% macro senatorial(senator, party) %}
+{% macro senatorial(senator) %}
 <div class="d-flex align-items-center mb-5">
-    <input type="radio" name="" class="mr-5">
-    <label for="" class="flex-fill">
+    <input type="radio" id="{{senator.id}}" name="senator" class="mr-5" value="senator.id" >
+    <label for="{{senator.id}}" class="flex-fill">
         <div class="candidate container">
             <div class="candidate-header row">
                 <div class="col-2 pl-4 d-flex align-items-center">
                     <img src="../../static/images/favicon.png" alt="" class="party-logo">
                 </div>
                 <div class="col-10 d-flex align-items-center justify-content-center">
-                    <span class="party-name">Jubilee Party</span>
+                    <span class="party-name">{{senator.party_name}}</span>
                 </div>
             </div>
             <div class="candidate-body row">
@@ -21,14 +21,14 @@
                         </div>
                         <div class="col-9 pl-4 d-flex align-items-center">
                             <div>
-                                <div class="candidate-name">Donald Trump</div>
+                                <div class="candidate-name">{{senator.first_name}} {{senator.last_name}}</div>
                                 <div class="candidate-title">Senatorial Candidate</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-3 current-results d-flex align-items-center justify-content-center">
-                    <h1>63%</h1>
+                    <h1>{{senator.votes}}</h1>
                 </div>
             </div>
         </div>
