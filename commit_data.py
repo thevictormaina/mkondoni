@@ -26,11 +26,11 @@ governors = [
 
 senators = [
     Senator(first_name="Margaret", last_name="Kamar",
-            location="Uasin-Gishu", votes=0,party_name="ODM"),
+            location="Uasin-Gishu", votes=0,party_name="ODM",profile_pic_path = "../../static/images/senators/mkamar.jpg"),
     Senator(first_name="Kipchumba", last_name="Murkomen",
-            location="Elgeyo-Marakwet", votes=0,party_name="Jubilee"),
+            location="Elgeyo-Marakwet", votes=0,party_name="Jubilee",profile_pic_path = "../../static/images/senators/Kipchumba.jpg"),
     Senator(first_name="Samuel", last_name="Poghisio",
-            location="West-Pokot", votes=0,party_name="ODM")
+            location="West-Pokot", votes=0,party_name="ODM",profile_pic_path = "../../static/images/senators/samuel.jpg")
 
 ]
 
