@@ -17,11 +17,12 @@ presidents = [
     
 ]
 
-deputy-presidents = [
-    President(first_name="William", last_name="Ruto",
-              location="Kenya"),
-    President(first_name="Kalonzo", last_name="Musyoka",
-              location="Kenya")
+
+deputy = [
+    Deputy(first_name="William", last_name="Ruto",
+              location="Kenya",president_id=President.query.filter_by(first_name="Uhuru").first().id),
+    Deputy(first_name="Kalonzo", last_name="Musyoka",
+              location="Kenya",president_id=President.query.filter_by(first_name="Raila").first().id)
 ]
 
 governors = [
@@ -44,13 +45,13 @@ senators = [
 ]
 
 parties =[
-        party(party_name="ODM",party_logo_path=" ")
-        party(party_name="Jubilee",party_logo_path=" ")
+        Party(party_name="ODM",party_logo_path=" "),
+        Party(party_name="Jubilee",party_logo_path=" ")
 ]
 
 
 def commit_data():
-    data = [voters, governors, presidents,deputy-presidents, senators]
+    data = [voters, governors, presidents,deputy-presidents, senators, parties]
     for list in data:
         for person in list:
             db.session.add(person)
