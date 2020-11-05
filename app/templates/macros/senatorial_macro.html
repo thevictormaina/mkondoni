@@ -5,7 +5,7 @@
         <div class="candidate container">
             <div class="candidate-header row">
                 <div class="col-2 pl-4 d-flex align-items-center">
-                    <img src="background-image: url('{{ senator.profile_pic_path}}')">
+                    <img src="../../static/images/favicon.png" alt="" class="party-logo">
                 </div>
                 <div class="col-10 d-flex align-items-center justify-content-center">
                     <span class="party-name">{{senator.party_name}}</span>
@@ -16,7 +16,7 @@
                     <div class="row">
                         <div class="col-3 p-0">
                             <div class="candidate-image"
-                                style="background-image: url('../../static/images/1200px-Donald_Trump_official_portrait.jpg');">
+                                style="background-image: url('{{senator.profile_pic_path}}');">
                             </div>
                         </div>
                         <div class="col-9 pl-4 d-flex align-items-center">
