@@ -18,7 +18,7 @@ presidents = [
 ]
 
 
-deputy = [
+deputies = [
     Deputy(first_name="William", last_name="Ruto",
               location="Kenya",president_id=President.query.filter_by(first_name="Uhuru").first().id),
     Deputy(first_name="Kalonzo", last_name="Musyoka",
@@ -51,7 +51,7 @@ parties =[
 
 
 def commit_data():
-    data = [voters, governors, presidents,deputy-presidents, senators, parties]
+    data = [voters, governors, presidents,deputies, senators, parties]
     for list in data:
         for person in list:
             db.session.add(person)
