@@ -24,7 +24,7 @@ class DevConfig(Config):
     """
     Class for Development configurations. Child of Config class.
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://victormainak:password@localhost/mkondoni'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABSE_URL")
     DEBUG = True
     
 config_options = {"development": DevConfig, "production": ProdConfig,"test": TestConfig}
